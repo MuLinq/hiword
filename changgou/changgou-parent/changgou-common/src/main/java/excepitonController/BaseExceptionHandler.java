@@ -12,7 +12,7 @@ public class BaseExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public Result error(Exception e){
-        e.printStackTrace();
+        e.printStackTrace(); //异常处理
         return new Result(false, StatusCode.ERROR,e.getMessage());
     }
 }
